@@ -12,7 +12,7 @@ else
 fi
 
 # 设置变量
-REPO_URL="https://github.com/your-username/server-panel.git"
+REPO_URL="https://github.com/sergang8888/server-panel.git"
 INSTALL_DIR="/tmp/server-panel-install"
 IMAGE_NAME="server-panel"
 CONTAINER_NAME="server-panel-container"
