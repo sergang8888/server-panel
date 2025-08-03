@@ -16,7 +16,7 @@ NC='\033[0m' # No Color
 GO_VERSION="1.21.0"
 PROJECT_NAME="webserver-panel"
 # 请将下面的仓库地址替换为实际的GitHub仓库地址
-GITHUB_REPO="your-username/webserver-panel"
+GITHUB_REPO="sergang8888/server-panel"
 INSTALL_DIR="$HOME/webserver-panel"
 GO_INSTALL_DIR="$HOME/go"
 

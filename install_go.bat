@@ -9,7 +9,7 @@ REM 配置变量
 set GO_VERSION=1.21.0
 set PROJECT_NAME=webserver-panel
 REM 请将下面的仓库地址替换为实际的GitHub仓库地址
-set GITHUB_REPO=your-username/webserver-panel
+set GITHUB_REPO=sergang8888/server-panel
 set INSTALL_DIR=%USERPROFILE%\webserver-panel
 set GO_INSTALL_DIR=%USERPROFILE%\go
 
