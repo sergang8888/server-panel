@@ -1,0 +1,24 @@
+[Unit]
+Description=Ubuntu Web Management Panel
+After=network.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/opt/ubuntu-web-panel
+Environment=FLASK_ENV=production
+ExecStart=/opt/ubuntu-web-panel/venv/bin/python /opt/ubuntu-web-panel/app.py
+Restart=always
+RestartSec=3
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=ubuntu-web-panel
+
+# 安全设置
+NoNewPrivileges=false
+PrivateTmp=true
+ProtectSystem=false
+ProtectHome=true
+
+[Install]
+WantedBy=multi-user.target
