@@ -16,7 +16,13 @@ from pathlib import Path
 
 class HelmetDetectionInstaller:
     def __init__(self):
-        self.system = platform.system().lower()
+        # 修复可能的系统名称拼写错误
+        detected_system = platform.system().lower().strip()
+        if detected_system == 'linlx':  # 修复常见的拼写错误
+            self.system = 'linux'
+        else:
+            self.system = detected_system
+        self.arch = platform.machine().lower()
         self.python_cmd = self.get_python_command()
         self.install_dir = Path.cwd() / "helmet-detection-system"
         

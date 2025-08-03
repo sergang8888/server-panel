@@ -24,7 +24,12 @@ import json
 
 class OnlineInstaller:
     def __init__(self):
-        self.system = platform.system().lower()
+        # 修复可能的系统名称拼写错误
+        detected_system = platform.system().lower().strip()
+        if detected_system == 'linlx':  # 修复常见的拼写错误
+            self.system = 'linux'
+        else:
+            self.system = detected_system
         self.python_cmd = self.get_python_command()
         self.install_dir = Path.home() / "helmet-detection-system"
         self.repo_url = "https://github.com/your-repo/helmet-detection-system"
